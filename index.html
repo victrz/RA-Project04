@@ -10,16 +10,16 @@
 </head>
 <body>
 <header>
-  <div class="background-image-banner flex flex-align-center">
+  <div class="background-image-banner">
     <nav id="top-nav">
-      <img src="./src/assets/images/logos/inhabitent-logo-tent-white.svg" class="image-logo">
-      <div class="flex-grow flex-just-end ">
+      <div class="flex flex-grow flex-just-between ">
+        <img src="./src/assets/images/logos/inhabitent-logo-tent-white.svg" alt="tent logo" class="image-logo flex" height="20px">
         <ul class="flex flex-just-around">
-            <li><a class="" href="#shop"> about </a></li>
-            <li><a class="" href="#journal"> shop </a></li>
-            <li><a class="" href="#about"> featured </a></li>
-            <li><a class="" href="#find us"> updates </a></li>
-            <li><a class="" href=""> 00</a></li>
+            <li><a class="" href="#"> about </a></li>
+            <li><a class="" href="#shop"> shop </a></li>
+            <li><a class="" href="#"> featured </a></li>
+            <li><a class="" href="#"> updates </a></li>
+            <li><a class="" href=""> <span class="fa fa-search" aria-hidden="true"></span></a></li>
         </ul>
       </div>
     </nav>
@@ -31,22 +31,22 @@
   <section id="shop" class="flex flex-col flex-align-items-center padding20">
     <h1>SHOP STUFF</h1>
     <div class="flex flex-row">
-      <div class="shop-category">
+      <div class="shop-category margin-left-item">
         <img src="./src/assets/images/product-type-icons/do.svg" alt="do icon" width="80px" class="padding10">
         <p>Get back to nature with all the tools and toys you need to enjoy the great outdoors.</p>
         <button id="button-shop" type="button">DO STUFF</button>
       </div>
-      <div class="shop-category">
+      <div class="shop-category margin-center-item">
         <img src="./src/assets/images/product-type-icons/eat.svg" alt="eat icon" width="80px" class="padding10">
         <p>Nothing beats food cooked over a fire. We have all you need for good camping eats.</p>
         <button id="button-shop" type="button">EAT STUFF</button>
       </div>
-      <div class="shop-category">
+      <div class="shop-category margin-center-item">
         <img src="./src/assets/images/product-type-icons/sleep.svg" alt="sleep icon" width="80px" class="padding10">
         <p>Get a good night's rest in the wild in a home away from home that travels well.</p>
         <button id="button-shop" type="button">SLEEP STUFF</button>
       </div>
-      <div class="shop-category">
+      <div class="shop-category margin-right-item">
         <img src="./src/assets/images/product-type-icons/wear.svg" alt="sleep icon" width="80px" class="padding10">
         <p>From flannel shirts to toques, look the part while roughing it in the great outdoors.</p>
         <button id="button-shop" type="button">WEAR STUFF</button>
@@ -58,7 +58,7 @@
   <section id="journal" class="flex flex-col flex-align-items-center padding20">
     <h1>INHABITENT JOURNAL</h1>
     <div class="flex flex-row">
-      <div class="journal-category flex flex-col">
+      <div class="journal-category flex flex-col padding-left-item">
         <div id="journal-entry1"></div>
         <div class="journal-border">
           <div>
@@ -68,7 +68,7 @@
           <button id="button-journal" type="button">READ ENTRY</button>
         </div>
       </div>
-      <div class="journal-category flex flex-col">
+      <div class="journal-category flex flex-col padding-center-item">
         <div id="journal-entry2"></div>
         <div class="journal-border">
           <div>
@@ -78,7 +78,7 @@
           <button id="button-journal" type="button">READ ENTRY</button>
         </div>
       </div>
-      <div class="journal-category flex flex-col">
+      <div class="journal-category flex flex-col padding-right-item">
         <div id="journal-entry3"></div>
         <div class="journal-border">
           <div>
@@ -98,7 +98,7 @@
         <h3>TITLE</h3>
         <button id="button-readmore" type="button">READ MORE</button>
       </div>
-      <div class="flex flex-col flex-grow">
+      <div class="flex flex-col width50 flex-grow">
         <div id="right-top-adventure" class="flex flex-grow flex-col">
           <h3>TITLE</h3>
           <button id="button-readmore" type="button">READ MORE</button>
@@ -123,22 +123,23 @@
     <div class="flex flex-just-between">
       <div>
         <h4>CONTACT INFO</h4>
-        <p class="body-font text-white">email</p>
-        <p class="body-font text-white">phone</p>
-        <div>icons</div>
+        <p class="body-font text-white"><span class="fa fa-envelope" aria-hidden="true"></span>
+ info@inhabitent.com</p>
+        <p class="body-font text-white"><span class="fa fa-phone" aria-hidden="true"></span> 778-456-7891</p>
+        <p class="text-white"><span class="fa fa-facebook-official" aria-hidden="true"></span> <span class="fa fa-twitter-square" aria-hidden="true"></span> <span class="fa fa-google-plus-square" aria-hidden="true"></span>
       </div>
       <div>
         <h4>BUSINESS HOURS</h4>
-        <p class="body-font text-white">monday-friday</p>
-        <p class="body-font text-white">saturday</p>
-        <p class="body-font text-white">sunday</p>
+        <p class="body-font text-white"><span class="text-footer-bold">monday-friday</span> 9am to 5pm</p>
+        <p class="body-font text-white"><span class="text-footer-bold">saturday</span> 10am to 2pm</p>
+        <p class="body-font text-white"><span class="text-footer-bold">sunday</span> Closed</p>
       </div>
       <div class="flex">
         <img src="./src/assets/images/logos/inhabitent-logo-text.svg" height="50px">
       </div>
     </div>
     <div>
-      <p class="text-footer-copyright">COPYRIGHT</p>
+      <p class="text-footer-copyright">COPYRIGHT 2016 INHABITENT</p>
     </div>
   </section>
 </footer>

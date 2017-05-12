@@ -61,15 +61,16 @@ h3{
   font-family: "Merriweather-Light.ttf";
   font-size: 2.2em;
   color: white;
+  padding: 10px;
 }
 h4{
   font-family: "Novecento-DemiBold.ttf";
   font-size: 1em;
-  color: orange;
+  color: #d99054;
 }
 p{
   font-family:"Merriweather-Light.ttf";
-  padding: 10px;
+  padding: 10px 0 10px 0;
 }
 .text-footer-copyright{
   font-family: "Novecento-Normal.ttf";
@@ -78,6 +79,10 @@ p{
   color: white;
   text-align: center;
 }
+.text-footer-bold{
+  font-family: "Merriweather-Bold.ttf";
+}
+
 
 /* flex */
 .flex{
@@ -122,11 +127,28 @@ p{
 .padding20{
   padding:20px;
 }
+.padding-center-item{
+  padding: 0 5px 0 5px;
+}
+.padding-left-item{
+  padding: 0 10px 0 0;
+}
+.padding-right-item{
+  padding: 0 0 0 10px;
+}
+.margin-center-item{
+  margin: 0 5px 0 5px;
+}
+.margin-left-item{
+  margin: 0 10px 0 0;
+}
+.margin-right-item{
+  margin: 0 0 0 10px;
+}
 
 #top-nav{
   height: 10vh;
   width: 100%;
-  /*background-color: white;*/
   display: flex;
   padding: 10px;
   font-family: "Novecento-Normal.ttf";
@@ -136,8 +158,6 @@ p{
 ul {
     list-style-type: none;
     overflow: hidden;
-    /*background-color: #ffffff;*/
-    /*position: fixed;*/
     width: 40%;
 }
 a:link, a:visited {
@@ -155,16 +175,15 @@ content{
 
 .background-image-banner{
   background-image: url("./src/assets/images/logos/inhabitent-logo-full.svg"),url("./src/assets/images/home-hero.jpg" );
-  height: 40vh;
+  height: 50vh;
   background-position: center center;
-  background-size: 20vh, cover;
+  background-size: 30vh, cover;
   background-repeat: no-repeat;
   /*text-align: center;*/
   justify-content: center;
 }
 .image-logo{
-  height: 16px;
-  /*padding: 10px;*/
+  margin-left: 20px;
 }
 .shop-category{
   border-style: solid;
@@ -175,25 +194,21 @@ content{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  margin: 10px;
   text-align: center;
 }
 #button-shop{
   background-color: #008080;
   padding: 10px 24px;
+  margin-bottom: 10px;
   border: none;
   color: white;
-  padding: 10px;
 }
 .journal-category{
-  width: 33%;
+  width: 33.3333%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  margin: 10px;
   text-align: center;
 }
 .journal-border{
@@ -242,21 +257,23 @@ content{
   color: black;
   display: flex;
   align-self: flex-start;
-  margin: 10px;
+  margin: 10px 0 10px 30px;
 }
 #adventure-wrap{
   width: 100%;
   padding-bottom: 20px;
 }
+.width50{
+  width: 50%;
+}
 #left-adventure{
   background-image: url("./src/assets/images/adventure-photos/canoe-girl.jpg");
   height: auto;
+  width: 50%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*text-align: center;*/
   justify-content: center;
-  margin: 0 0 0 0;
 }
 #right-top-adventure{
   background-image: url("./src/assets/images/adventure-photos/beach-bonfire.jpg");
@@ -264,7 +281,6 @@ content{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*text-align: center;*/
   justify-content: center;
   margin: 0 0 0 5px;
 }
@@ -274,7 +290,6 @@ content{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*text-align: center;*/
   justify-content: center;
   margin: 10px 10px 0 5px;
 }
@@ -284,7 +299,6 @@ content{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /*text-align: center;*/
   justify-content: center;
   margin: 10px 0 0 0;
 }
