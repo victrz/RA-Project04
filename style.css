@@ -68,6 +68,11 @@ h4{
   font-size: 1em;
   color: #d99054;
 }
+h5{
+  font-family: "Novecento-DemiBold.ttf";
+  font-size: 1.2em;
+  color: black;
+}
 p{
   font-family:"Merriweather-Light.ttf";
   padding: 10px 0 10px 0;
@@ -118,6 +123,9 @@ p{
 .flex-align-start{
   align-self: flex-start;
 }
+.flex-align-end{
+  align-self: flex-end;
+}
 .flex-grow{
   flex-grow:1;
 }
@@ -147,14 +155,28 @@ p{
 }
 
 #top-nav{
-  height: 10vh;
+  height: auto;
   width: 100%;
   display: flex;
   padding: 10px;
   font-family: "Novecento-Normal.ttf";
 
 }
-
+#top-nav-journal{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Novecento-Normal.ttf";
+  color: #248A83;
+}
+.nav-wrap{
+  border-bottom: solid 1px #c3c3c3;
+}
+#top-nav-journal a:link, a:visited{
+  text-decoration: none;
+  color: #248A83;
+}
 ul {
     list-style-type: none;
     overflow: hidden;
@@ -171,6 +193,7 @@ header{
 
 content{
   width:85%;
+  margin:auto;
 }
 
 .background-image-banner{
@@ -319,4 +342,99 @@ footer{
   background-size: cover;
   background-repeat: no-repeat;
   padding: 20px;
+}
+aside{
+  width: 20%;
+  padding: 40px 0 40px 40px;
+  border-left: solid 1px #c3c3c3;
+}
+aside h4{
+  color: black;
+}
+#journal-posts{
+  width: 80%;
+  padding: 40px;
+  margin: auto;
+}
+#journal-wrap{
+  padding-bottom: 20px;
+}
+#journal-wrap h1 h2{
+  /*use sass extends*/
+  background-color: #248A83;
+  color: white;
+}
+
+#journal-wrap h1{
+  width: 75%;
+}
+
+#journal-wrap h2{
+  width: 45%;
+}
+#journal-banner-1{
+  /*use extends in sass for 1-4 images*/
+  background-image: url("./src/assets/images/blog-photos/van-camper.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-2{
+  background-image: url("./src/assets/images/blog-photos/warm-cocktail.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-3{
+  background-image: url("./src/assets/images/blog-photos/healthy-camp-food.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-4{
+  background-image: url("./src/assets/images/blog-photos/solo-camping.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-5{
+  background-image: url("./src/assets/images/blog-photos/glamping.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.adventure-image-banner{
+  background-image: url("./src/assets/images/adventure-photos/night-sky.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+article{
+  width:70%;
+  margin: auto;
+  padding: 20px;
+}
+article h2{
+  color:black;
+  font-size: 2em;
+  padding: 0;
+}
+#submit-form-section{
+  width:70%;
+  margin: auto;
+  padding: 20px;
+}
+form{
+  margin:auto;
+}
+textarea{
+	width: 80%;
+	height: 40vh;
 }
