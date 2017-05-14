@@ -1,0 +1,43 @@
+<!--  SINGLE ADVENTURE VIEW -->
+<header>
+    <div class="adventure-image-banner">
+      <nav id="top-nav">
+        <div class="flex flex-grow flex-just-between ">
+          <img src="../assets/images/logos/inhabitent-logo-tent-white.svg" alt="tent logo" class="image-logo flex" height="20px">
+          <ul class="flex flex-just-around">
+              <li><a class="" routerLink="/about" routerLinkActive="active"> about </a></li>
+              <li><a class="" href="#shop"> shop </a></li>
+              <li><a class="" href="#"> featured </a></li>
+              <li><a class="" href="#"> updates </a></li>
+              <li><a class="" href=""> <span class="fa fa-search" aria-hidden="true"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <content>
+    <article>
+      <h2>TITLE</h2>
+      <h5>author</h5>
+      <p>Semiotics flannel artisan, squid whatever YOLO cold-pressed thundercats slow-carb normcore. Meggings lo-fi franzen waistcoat tattooed, pour-over etsy artisan. Seitan butcher tacos gentrify. Raw denim fap yr shabby chic. Thundercats mustache mlkshk messenger bag. Cronut crucifix wolf, artisan VHS skateboard chambray single-origin coffee fap. Shabby chic brooklyn meh kale chips, pour-over forage farm-to-table irony flannel mumblecore heirloom pickled cred.<br><br>
+        Swag chillwave chicharrones quinoa. Plaid yr small batch four loko. Polaroid scenester tattooed, biodiesel quinoa mumblecore 3 wolf moon leggings iPhone small batch sartorial meditation pop-up cardigan. Chillwave kitsch asymmetrical artisan, actually kogi cronut portland pork belly cardigan sustainable. Letterpress hammock heirloom kogi selvage biodiesel. Scenester occupy cornhole, banh mi post-ironic taxidermy crucifix mumblecore. Authentic pug next level, health goth slow-carb truffaut neutra literally biodiesel butcher retro.<br><br>
+        Intelligentsia food truck taxidermy before they sold out hoodie mustache. Disrupt trust fund gluten-free, tilde you probably haven't heard of them whatever seitan hammock listicle tumblr. Venmo kale chips kitsch authentic raw denim pabst. Quinoa chicharrones flannel PBR&amp;B, narwhal sartorial jean shorts VHS DIY bespoke gastropub hella. Man braid squid humblebrag migas leggings, semiotics hella selvage kombucha blog williamsburg synth before they sold out. Plaid synth chicharrones, before they sold out neutra single-origin coffee cred. Pitchfork small batch etsy readymade, post-ironic pug viral.
+      </p>
+    </article>
+    <section id="submit-form-section">
+      <form method='post'>
+        Title: <input type='text' name='title' id='title' /><br />
+
+        Author: <input type='text' name='author' id='author' /><br />
+
+        Image: <input type='text' name='image' id='image' /><br />
+
+        Entry:<br />
+        <textarea name='entry' id='entry'></textarea><br />
+
+        <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+        <input type='submit' value='Submit'/>
+      </form>
+    </section>
+  </content>
