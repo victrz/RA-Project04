@@ -7,7 +7,7 @@ import { Location }               from '@angular/common';
 @Component({
   selector: 'single-adventure',
   templateUrl: './single-adventure.component.html',
-  styleUrls: ['../reset.css','../style.css']
+  styleUrls: ['../style.css']
 })
 export class SingleAdventureComponent{
 

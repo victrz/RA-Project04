@@ -7,34 +7,34 @@
 
 @font-face {
     font-family: "Merriweather-Bold.ttf";
-    src: url("./src/assets/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
+    src: url("./assets/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
     font-weight: bold;
 }
 @font-face {
     font-family: "Merriweather-BoldItalic.ttf";
-    src: url("./src/assets/fonts/Merriweather/Merriweather-BoldItalic.ttf") format("truetype");
+    src: url("./assets/fonts/Merriweather/Merriweather-BoldItalic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
   font-family: "Merriweather-Light.ttf";
-  src: url("./src/assets/fonts/Merriweather/Merriweather-Light.ttf") format("truetype");
+  src: url("./assets/fonts/Merriweather/Merriweather-Light.ttf") format("truetype");
   font-weight: lighter;
 }
 @font-face {
   font-family: "Merriweather-LightItalic.ttf";
-  src: url("./src/assets/fonts/Merriweather/Merriweather-LightItalic.ttf") format("truetype");
+  src: url("./assets/fonts/Merriweather/Merriweather-LightItalic.ttf") format("truetype");
   font-weight: lighter;
   font-style: italic;
 }
 @font-face {
   font-family: "Novecento-DemiBold.ttf";
-  src: url("./src/assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf") format("truetype");
+  src: url("./assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf") format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: "Novecento-Normal.ttf";
-  src: url("./src/assets/fonts/Novecento/Novecentosanswide-Normal.ttf") format("truetype");
+  src: url("./assets/fonts/Novecento/Novecentosanswide-Normal.ttf") format("truetype");
   font-weight: bold;
 }
 .body-font{
@@ -53,7 +53,7 @@ h2{
   font-family: "Novecento-DemiBold.ttf";
   font-size: 1.4em;
   line-height: 0.8em;
-  padding: 10px 30px;
+  padding: 10px 35px;
   color: #008080;
   text-align: left;
 }
@@ -71,7 +71,6 @@ h4{
 h5{
   font-family: "Novecento-DemiBold.ttf";
   font-size: 1.2em;
-  color: black;
 }
 p{
   font-family:"Merriweather-Light.ttf";
@@ -173,10 +172,7 @@ p{
 .nav-wrap{
   border-bottom: solid 1px #c3c3c3;
 }
-#top-nav-journal a:link, a:visited{
-  text-decoration: none;
-  color: #248A83;
-}
+
 ul {
     list-style-type: none;
     overflow: hidden;
@@ -196,8 +192,24 @@ content{
   margin:auto;
 }
 
+.background-image-about{
+  background-image: url("./assets/images/about-hero.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  justify-content: center;
+}
+.background-image-about h1{
+  font-family: "Novecento-DemiBold.ttf";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
 .background-image-banner{
-  background-image: url("./src/assets/images/logos/inhabitent-logo-full.svg"),url("./src/assets/images/home-hero.jpg" );
+  background-image: url("./assets/images/logos/inhabitent-logo-full.svg"),url("./assets/images/home-hero.jpg" );
   height: 50vh;
   background-position: center center;
   background-size: 30vh, cover;
@@ -226,6 +238,13 @@ content{
   border: none;
   color: white;
 }
+#button-more-adventures{
+  background-color: #008080;
+  padding: 10px 24px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+}
 .journal-category{
   width: 33.3333%;
   display: flex;
@@ -238,13 +257,14 @@ content{
   border-style: solid;
   border-width: 3px 1px 1px 1px;
   border-color: #c3c3c3;
+  width: 100%;
   flex-grow: 1;
 }
 #journal-entry1{
   border-style: solid;
   border-width: 3px 1px 1px 1px;
   border-color: #c3c3c3;
-  background-image: url("./src/assets/images/blog-photos/van-camper.jpg");
+  background-image: url("./assets/images/blog-photos/van-camper.jpg");
   height: 25vh;
   width: 100%;
   background-size: cover;
@@ -255,7 +275,7 @@ content{
   border-style: solid;
   border-width: 3px 1px 1px 1px;
   border-color: #c3c3c3;
-  background-image: url("./src/assets/images/blog-photos/warm-cocktail.jpg");
+  background-image: url("./assets/images/blog-photos/warm-cocktail.jpg");
   height: 25vh;
   width: 100%;
   background-size: cover;
@@ -266,7 +286,7 @@ content{
   border-style: solid;
   border-width: 3px 1px 1px 1px;
   border-color: #c3c3c3;
-  background-image: url("./src/assets/images/blog-photos/healthy-camp-food.jpg");
+  background-image: url("./assets/images/blog-photos/healthy-camp-food.jpg");
   height: 25vh;
   width: 100%;
   background-size: cover;
@@ -274,6 +294,7 @@ content{
   background-repeat: no-repeat;
 }
 #button-journal{
+  /*set button position from bottom left*/
   background-color: #ffffff;
   padding: 10px 24px;
   border: 1px solid #000000;
@@ -290,7 +311,7 @@ content{
   width: 50%;
 }
 #left-adventure{
-  background-image: url("./src/assets/images/adventure-photos/canoe-girl.jpg");
+  background-image: url("./assets/images/adventure-photos/canoe-girl.jpg");
   height: auto;
   width: 50%;
   background-position: center;
@@ -299,7 +320,7 @@ content{
   justify-content: center;
 }
 #right-top-adventure{
-  background-image: url("./src/assets/images/adventure-photos/beach-bonfire.jpg");
+  background-image: url("./assets/images/adventure-photos/beach-bonfire.jpg");
   height: 25vh;
   background-position: center;
   background-size: cover;
@@ -308,7 +329,7 @@ content{
   margin: 0 0 0 5px;
 }
 #right-bottom-left-adventure{
-  background-image: url("./src/assets/images/adventure-photos/mountain-hikers.jpg");
+  background-image: url("./assets/images/adventure-photos/mountain-hikers.jpg");
   height: 25vh;
   background-position: center;
   background-size: cover;
@@ -317,7 +338,7 @@ content{
   margin: 10px 10px 0 5px;
 }
 #right-bottom-right-adventure{
-  background-image: url("./src/assets/images/adventure-photos/night-sky.jpg");
+  background-image: url("./assets/images/adventure-photos/night-sky.jpg");
   height: 25vh;
   background-position: center;
   background-size: cover;
@@ -336,7 +357,7 @@ content{
 }
 
 footer{
-  background-image: url("./src/assets/images/dark-wood@2x.png");
+  background-image: url("./assets/images/dark-wood@2x.png");
   height: 30vh;
   background-position: center;
   background-size: cover;
@@ -351,6 +372,12 @@ aside{
 aside h4{
   color: black;
 }
+#top-nav-journal a:link, #top-nav-journal a:visited, #top-nav-journal a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+
+
 #journal-posts{
   width: 80%;
   padding: 40px;
@@ -374,42 +401,48 @@ aside h4{
 }
 #journal-banner-1{
   /*use extends in sass for 1-4 images*/
-  background-image: url("./src/assets/images/blog-photos/van-camper.jpg");
+  background-image: url("./assets/images/blog-photos/van-camper.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+#journal-banner-1 h1, #journal-banner-1 h2{
+  color: white;
+  background-color: #248A83;
+}
+
+
 #journal-banner-2{
-  background-image: url("./src/assets/images/blog-photos/warm-cocktail.jpg");
+  background-image: url("./assets/images/blog-photos/warm-cocktail.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-3{
-  background-image: url("./src/assets/images/blog-photos/healthy-camp-food.jpg");
+  background-image: url("./assets/images/blog-photos/healthy-camp-food.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-4{
-  background-image: url("./src/assets/images/blog-photos/solo-camping.jpg");
+  background-image: url("./assets/images/blog-photos/solo-camping.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-5{
-  background-image: url("./src/assets/images/blog-photos/glamping.jpg");
+  background-image: url("./assets/images/blog-photos/glamping.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .adventure-image-banner{
-  background-image: url("./src/assets/images/adventure-photos/night-sky.jpg");
+  background-image: url("./assets/images/adventure-photos/night-sky.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
@@ -437,4 +470,19 @@ form{
 textarea{
 	width: 80%;
 	height: 40vh;
+}
+#about-page{
+  width: 80%;
+  padding: 30px 0 60px 0;
+  margin: auto;
+}
+#about-page h5{
+  color: black;
+  text-align: center;
+  padding: 30px;
+}
+
+#page-not-found-page{
+  width: 80%;
+  margin: auto;
 }

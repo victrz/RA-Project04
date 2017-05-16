@@ -3,7 +3,7 @@ import { Component} from '@angular/core';
 @Component({
   selector: 'homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['../reset.css','../style.css']
+  styleUrls: ['../style.css', './journal-posts.component.css']
 })
 export class HomepageComponent  {
 

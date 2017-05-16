@@ -9,6 +9,9 @@ import { SingleAdventureComponent } from './single-adventure.component';
 import { HomepageComponent } from './homepage.component';
 import { AboutComponent } from './about.component';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { ShowLatestJournalsComponent } from './show-latest-journals.component';
+import { JournalService } from './service/journal.service';
+
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import { PageNotFoundComponent } from './page-not-found.component';
     SingleAdventureComponent,
     HomepageComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ShowLatestJournalsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [JournalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
