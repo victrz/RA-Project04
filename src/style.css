@@ -449,12 +449,12 @@ aside h4{
   background-repeat: no-repeat;
 }
 .adventure-image-banner{
-  background-image: url("./assets/images/adventure-photos/night-sky.jpg");
+  /*background-image: url("./assets/images/adventure-photos/night-sky.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  justify-content: center;
+  justify-content: center;*/
 }
 article{
   width:70%;

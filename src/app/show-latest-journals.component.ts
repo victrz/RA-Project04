@@ -15,6 +15,9 @@ export class ShowLatestJournalsComponent implements OnInit {
   constructor(private journalService: JournalService) {}
 
   ngOnInit(): void {
+
+    // const journalsFromService: any = this.journalService.getJournals();
+
     console.log('initializing show-latest-journals view');
     const myPromiseOfJournals: any = this.journalService.getJournals();
     const extractDataFromPromise: Function = (response) => {
@@ -40,7 +43,7 @@ export class ShowLatestJournalsComponent implements OnInit {
             break;
         }
       }
-      this.renderView(newEntries);
+    //  this.renderView(newEntries);
       this.journalEntries = newEntries;
 
       return newEntries;
@@ -49,10 +52,10 @@ export class ShowLatestJournalsComponent implements OnInit {
   }
 
 
-  renderView(j){
+  renderView(){
+    console.log();
     //style backgroun images for adventure grid:
     // document.getElementById("left-adventure").style.backgroundImage = "url('{j.allJournals[0].image}')";
     // document.getElementById('RENDERHERE').innerHTML=j.allJournals[1].image;
-
   }
 }

@@ -3,7 +3,7 @@
   <div id="RENDERHERE"></div>
   <div id="adventure-wrap" class="flex">
     <div id="left-adventure"  *ngIf="journalEntries" class="flex flex-grow flex-col">
-      <h3> {{journalEntries.allJournals[0].title}}</h3>
+      <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[0].title}}</h3>
       <button id="button-readmore" [routerLink]="['/single-adventure',journalEntries.allJournals[0].id]" routerLinkActive="active" type="button">READ MORE</button>
     </div>
     <div class="flex flex-col width50 flex-grow">

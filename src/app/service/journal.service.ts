@@ -48,8 +48,7 @@ export class JournalService {
     console.log("$$$$$$$$$$$$");
     console.log(id);
     //loop through
-    //return retrievedJournal;
-    
+    return resolvedPromise;
   }
 
   testing(id:number | string){
