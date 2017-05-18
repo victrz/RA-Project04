@@ -32,16 +32,32 @@ export class JournalService {
      let whatToDoNext = postProcess.toPromise().then(responseFn).catch(this.handleError);
      let theNextSteps = Promise.resolve();
      return theNextSteps;
-   }
+  }
 
-   handleError(error){
+  handleError(error){
      console.log(error);
      // blah
-   }
-   findJournal(id: number | string) {
-    return resolvedPromise
-      .then(heroes => heroes.find(hero => hero.id === +id));
   }
-   }
 
-}
+  getJournalByID(id): any {
+    const getTheData = this.http.get(this.journalsUrl);
+    const newPromise: any = getTheData.toPromise();
+    const successFn: Function = resp => { return resp.json(); };
+    const failureFn: Function = err => {console.log(err)};
+    const resolvedPromise: any = Promise.resolve(newPromise.then(successFn).catch(failureFn));
+    console.log("$$$$$$$$$$$$");
+    console.log(id);
+    //loop through
+    //return retrievedJournal;
+    
+  }
+
+  testing(id:number | string){
+  console.log("%%%%%%");
+  console.log(id);
+  }
+  //  findJournal(id: number | string) {
+  //   // return resolvedPromise
+  //   //   .then(heroes => heroes.find(hero => hero.id === +id));
+  // }
+   }

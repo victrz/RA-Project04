@@ -18,15 +18,14 @@ export class SubmitJournalEntryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.CategoryEnum.Miscellaneous);
-    console.log('add journal init');
+    // console.log(this.CategoryEnum.Miscellaneous);
+    // console.log('add journal init');
     const x = CategoryEnum;
-    console.log(x);
+    // console.log(x);
     const options = Object.keys(CategoryEnum);
-    console.log(options);
+    // console.log(options);
     this.categories = options.slice(options.length / 2);
-    console.log(this.categories);
-    debugger;
+    // console.log(this.categories);
   }
 
   parseSelectedValue(value: string) {

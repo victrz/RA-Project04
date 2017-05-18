@@ -48,6 +48,7 @@ export class ShowLatestJournalsComponent implements OnInit {
     const resolveDetails: any = Promise.resolve(myPromiseOfJournals.then(extractDataFromPromise).then( (r) => { this.journalEntries = r } ));
   }
 
+
   renderView(j){
     //style backgroun images for adventure grid:
     // document.getElementById("left-adventure").style.backgroundImage = "url('{j.allJournals[0].image}')";
