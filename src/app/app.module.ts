@@ -11,6 +11,7 @@ import { AboutComponent } from './about.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { ShowLatestJournalsComponent } from './show-latest-journals.component';
 import { JournalService } from './service/journal.service';
+import { SubmitJournalEntryComponent } from './submit-journal-entry.component';
 
 
 
@@ -22,7 +23,8 @@ import { JournalService } from './service/journal.service';
     HomepageComponent,
     AboutComponent,
     PageNotFoundComponent,
-    ShowLatestJournalsComponent
+    ShowLatestJournalsComponent,
+    SubmitJournalEntryComponent
   ],
   imports: [
     BrowserModule,

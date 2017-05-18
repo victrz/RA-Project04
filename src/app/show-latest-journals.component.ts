@@ -11,48 +11,47 @@ import { JournalResponse } from './model/journal-response';
 })
 export class ShowLatestJournalsComponent implements OnInit {
   currentJournal:Journal;
-  journalEntries:JournalEntries;
+  journalEntries:JournalResponse;
   constructor(private journalService: JournalService) {}
-    //console.log('creating show-latest-journals component');
 
   ngOnInit(): void {
     console.log('initializing show-latest-journals view');
     const myPromiseOfJournals: any = this.journalService.getJournals();
     const extractDataFromPromise: Function = (response) => {
-      let myEntries:JournalResponse = <JournalResponse>response as JournalResponse;
-      let newEntries = new JournalEntries();
-      for (const item in myEntries){
-        let newJournal = new Journal();
+      let myResponse:JournalResponse = <JournalResponse>response as JournalResponse;
+      let newEntries = new JournalResponse();
+      let newCount:number = 0;
+      for (let item in myResponse){
         switch (item){
           case "count":
-            myEntries.count = parseInt(newJournal['count'], 10);
-            //add count item alongside journals array
-            //newEntries.journals[item] = newJournal
+            newCount= myResponse['count'];
+            newEntries.count = newCount;
+            //parseInt(newEntries['count'], 10);
             break;
           default:
-            newJournal.id = myEntries[item]['ID'];
-            newJournal.title = myEntries[item]['title'];
-            newJournal.categories = myEntries[item]['categories'];
-            newJournal.image = myEntries[item]['image'];
-            newJournal.date = myEntries[item]['date'];
-            newJournal.author = myEntries[item]['author'];
-            newEntries.journals[item] = newJournal;
+            let newJournal = new Journal();
+            newJournal.id = myResponse[item]['ID'];
+            newJournal.title = myResponse[item]['title'];
+            newJournal.categories = myResponse[item]['categories'];
+            newJournal.image = myResponse[item]['image'];
+            newJournal.date = myResponse[item]['date'];
+            newJournal.author = myResponse[item]['author'];
+            newEntries.allJournals.push(newJournal);
             break;
         }
-        newEntries.journals.push(newJournal);
       }
-      console.log("HERE");
-      console.log(newEntries.journals);
+      this.renderView(newEntries);
       this.journalEntries = newEntries;
-      console.log(this.journalEntries);
-      this.dosomething(this.journalEntries);
+
       return newEntries;
     }
-    const resolveDetails: any = Promise.resolve(myPromiseOfJournals.then(extractDataFromPromise));
+    const resolveDetails: any = Promise.resolve(myPromiseOfJournals.then(extractDataFromPromise).then( (r) => { this.journalEntries = r } ));
   }
-  dosomething(j){
-    console.log(j);
-    //render view here!
-    //latest adventures: [.length][.length-1][.length-2][.length-3]
+
+  renderView(j){
+    //style backgroun images for adventure grid:
+    // document.getElementById("left-adventure").style.backgroundImage = "url('{j.allJournals[0].image}')";
+    // document.getElementById('RENDERHERE').innerHTML=j.allJournals[1].image;
+
   }
 }

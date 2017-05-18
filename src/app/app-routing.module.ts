@@ -1,6 +1,6 @@
 //import { ModuleWithProviders } from '@angular/core';
 import { NgModule }             from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes,  Router, ActivatedRoute, Params } from '@angular/router';
 import { AppComponent } from './app.component';
 import { JournalPostsComponent }   from './journal-posts.component';
 import { SingleAdventureComponent }   from './single-adventure.component';
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',  component: HomepageComponent },
   { path: 'journal-posts',  component: JournalPostsComponent },
-  { path: 'single-adventure',  component: SingleAdventureComponent },
+  { path: 'single-adventure/:id',  component: SingleAdventureComponent },
   { path: 'about',  component: AboutComponent },
    { path: '**', component: PageNotFoundComponent }
 ];

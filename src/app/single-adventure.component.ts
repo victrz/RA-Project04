@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 import { Location }               from '@angular/common';
+import { JournalService }  from './service/journal.service';
 
 
 @Component({
@@ -11,7 +13,17 @@ import { Location }               from '@angular/common';
 })
 export class SingleAdventureComponent{
 
-  constructor() { }
+  constructor(  private route: ActivatedRoute,
+  private router: Router,
+  private service: JournalService) { }
 
+  ngOnInit() {
+
+
+    this.route.params
+      // (+) converts string 'id' to a number
+     .switchMap((params: Params) => this.service.findJournal(+params['id']))
+     .subscribe((journal: Journal) => this.journal = journal);
+  }
 
 }

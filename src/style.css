@@ -231,6 +231,13 @@ content{
   align-items: center;
   text-align: center;
 }
+#button-submit-journal{
+  background-color: #008080;
+  padding: 10px 24px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+}
 #button-shop{
   background-color: #008080;
   padding: 10px 24px;
