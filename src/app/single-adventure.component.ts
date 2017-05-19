@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import 'rxjs/add/operator/switchMap';
+//import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
 import { Location }               from '@angular/common';
 import { Journal } from './model/journal';
@@ -47,6 +47,7 @@ export class SingleAdventureComponent{
             let newJournal = new Journal();
             newJournal.id = myResponse[item]['ID'];
             newJournal.title = myResponse[item]['title'];
+            newJournal.content = myResponse[item]['content'];
             newJournal.categories = myResponse[item]['categories'];
             newJournal.image = myResponse[item]['image'];
             newJournal.date = myResponse[item]['date'];

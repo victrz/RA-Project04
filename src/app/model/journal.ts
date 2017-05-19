@@ -10,6 +10,7 @@ export class Journal {
    content:string = '', categories:Array<string> = [], image:string="", date:string="", author:string="") {
     this.id = id;
     this.title = title;
+    this.content = content;
     this.categories = categories;
     this.image = image;
     this.date = date;

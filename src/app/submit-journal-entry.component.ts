@@ -15,23 +15,37 @@ export class SubmitJournalEntryComponent implements OnInit {
   categoryValue: CategoryEnum;
   CategoryEnum: typeof CategoryEnum = CategoryEnum;
 
-  constructor() { }
+  constructor(private journalService: JournalService) { }
 
   ngOnInit() {
-    // console.log(this.CategoryEnum.Miscellaneous);
-    // console.log('add journal init');
+    console.log("IN SUBMIT JOURNAL COMPONENT");
     const x = CategoryEnum;
     // console.log(x);
-    const options = Object.keys(CategoryEnum);
-    // console.log(options);
+    const options = Object.keys(x);
     this.categories = options.slice(options.length / 2);
-    // console.log(this.categories);
   }
 
   parseSelectedValue(value: string) {
     console.log(value);
     this.categoryValue = CategoryEnum[value];
   }
+
+  submitForm(e:any) {
+    console.log("SUBMITFROM E BUTTON HANDLER FUNCTION");
+    // console.log((e.target as HTMLButtonElement).parentElement);
+    const theForm = (e.target as HTMLButtonElement).parentElement;
+    /* */
+    const serializedForm = this.jsSerializeArray(theForm);
+    const formData = JSON.stringify(serializedForm);
+    console.log("FORMDATA:");
+    console.log(formData);
+    const dataParams = {'params': formData} ;
+    const postThisJournal = this.journalService.postEntry(formData);
+
+    console.log("form submission result is: ");
+    console.log(postThisJournal);
+  }
+
    jsSerializeArray = (form) => {
      var field, l, s = [];
      if (typeof form == 'object' && form.nodeName == "FORM") {
@@ -53,7 +67,4 @@ export class SubmitJournalEntryComponent implements OnInit {
      }
      return s;
    };
-  // something like body.getElementById('button-submit-joural').addEventListener('click', journalService.postEntry(), false);
-  //bind the form to the event handler
-//get button element to submit form and, event listener for click, handler function to gather input data
 }

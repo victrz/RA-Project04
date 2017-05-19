@@ -20,23 +20,44 @@ export class JournalService {
     const resolvedPromise: any = Promise.resolve(newPromise.then(successFn).catch(failureFn));
     return resolvedPromise;
   }
-  postEntry(params: string): Promise<any> {
-  // this.postURL = this.postUrl + "params=" ;
-   //+ params;
+  postEntry(params: any): Promise<any> {
+    let postURL = this.postURL + "?params=" + params;
+    console.log(this.postURL);
 
      let responseFn:any = res => {
-         console.log(res);
          console.log('*****************');
+         console.log(res);
+        //  let response = res;
+        //  let test = response[`_body`];
+         //return res;
+        //  window.alert("Success! Post was Created!");
+        console.log(res[`_body`]);
+        let string = res['_body'];
+        let check = string.substring(2,14);
+        console.log(check);
+
+        if (check == "post_created"){
+          window.alert("Success! Post was Created!");
+        }
+        else{
+          window.alert("Error");
+        }
+
      };
-     let postProcess = this.http.post(this.postURL, params, {headers: this.headers});
+     
+
+     let postProcess = this.http.post(postURL, params);
      let whatToDoNext = postProcess.toPromise().then(responseFn).catch(this.handleError);
+     //.then(validationFn)
      let theNextSteps = Promise.resolve();
      return theNextSteps;
   }
 
   handleError(error){
+    console.log("ERROR:");
      console.log(error);
-     // blah
+     window.alert("Error!" + error);
+
   }
 
   getJournalByID(id): any {
@@ -51,12 +72,4 @@ export class JournalService {
     return resolvedPromise;
   }
 
-  testing(id:number | string){
-  console.log("%%%%%%");
-  console.log(id);
-  }
-  //  findJournal(id: number | string) {
-  //   // return resolvedPromise
-  //   //   .then(heroes => heroes.find(hero => hero.id === +id));
-  // }
-   }
+}
