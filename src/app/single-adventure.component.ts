@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-//import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
-import { Location }               from '@angular/common';
 import { Journal } from './model/journal';
 import { JournalService }  from './service/journal.service';
 import { JournalResponse } from './model/journal-response';
@@ -11,7 +9,7 @@ import { JournalResponse } from './model/journal-response';
 @Component({
   selector: 'single-adventure',
   templateUrl: './single-adventure.component.html',
-  styleUrls: ['../style.css']
+  styleUrls: ['../style.css', './single-adventure.component.css']
 })
 export class SingleAdventureComponent{
 

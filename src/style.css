@@ -76,17 +76,6 @@ p{
   font-family:"Merriweather-Light.ttf";
   padding: 10px 0 10px 0;
 }
-.text-footer-copyright{
-  font-family: "Novecento-Normal.ttf";
-  font-size: 0.5em;
-  padding: 20px;
-  color: white;
-  text-align: center;
-}
-.text-footer-bold{
-  font-family: "Merriweather-Bold.ttf";
-}
-
 
 /* flex */
 .flex{
@@ -161,14 +150,7 @@ p{
   font-family: "Novecento-Normal.ttf";
 
 }
-#top-nav-journal{
-  height: auto;
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  font-family: "Novecento-Normal.ttf";
-  color: #248A83;
-}
+
 .nav-wrap{
   border-bottom: solid 1px #c3c3c3;
 }
@@ -192,22 +174,6 @@ content{
   margin:auto;
 }
 
-.background-image-about{
-  background-image: url("./assets/images/about-hero.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  justify-content: center;
-}
-.background-image-about h1{
-  font-family: "Novecento-DemiBold.ttf";
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
 .background-image-banner{
   background-image: url("./assets/images/logos/inhabitent-logo-full.svg"),url("./assets/images/home-hero.jpg" );
   height: 50vh;
@@ -231,13 +197,7 @@ content{
   align-items: center;
   text-align: center;
 }
-#button-submit-journal{
-  background-color: #008080;
-  padding: 10px 24px;
-  margin-bottom: 10px;
-  border: none;
-  color: white;
-}
+
 #button-shop{
   background-color: #008080;
   padding: 10px 24px;
@@ -245,251 +205,7 @@ content{
   border: none;
   color: white;
 }
-#button-more-adventures{
-  background-color: #008080;
-  padding: 10px 24px;
-  margin-bottom: 10px;
-  border: none;
-  color: white;
-}
-.journal-category{
-  width: 33.3333%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.journal-border{
-  border-style: solid;
-  border-width: 3px 1px 1px 1px;
-  border-color: #c3c3c3;
-  width: 100%;
-  flex-grow: 1;
-}
-#journal-entry1{
-  border-style: solid;
-  border-width: 3px 1px 1px 1px;
-  border-color: #c3c3c3;
-  background-image: url("./assets/images/blog-photos/van-camper.jpg");
-  height: 25vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#journal-entry2{
-  border-style: solid;
-  border-width: 3px 1px 1px 1px;
-  border-color: #c3c3c3;
-  background-image: url("./assets/images/blog-photos/warm-cocktail.jpg");
-  height: 25vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#journal-entry3{
-  border-style: solid;
-  border-width: 3px 1px 1px 1px;
-  border-color: #c3c3c3;
-  background-image: url("./assets/images/blog-photos/healthy-camp-food.jpg");
-  height: 25vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#button-journal{
-  /*set button position from bottom left*/
-  background-color: #ffffff;
-  padding: 10px 24px;
-  border: 1px solid #000000;
-  color: black;
-  display: flex;
-  align-self: flex-start;
-  margin: 10px 0 10px 30px;
-}
-#adventure-wrap{
-  width: 100%;
-  padding-bottom: 20px;
-}
+
 .width50{
   width: 50%;
-}
-#left-adventure{
-  background-image: url("./assets/images/adventure-photos/canoe-girl.jpg");
-  height: auto;
-  width: 50%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
-}
-#right-top-adventure{
-  background-image: url("./assets/images/adventure-photos/beach-bonfire.jpg");
-  height: 25vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
-  margin: 0 0 0 5px;
-}
-#right-bottom-left-adventure{
-  background-image: url("./assets/images/adventure-photos/mountain-hikers.jpg");
-  height: 25vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
-  margin: 10px 10px 0 5px;
-}
-#right-bottom-right-adventure{
-  background-image: url("./assets/images/adventure-photos/night-sky.jpg");
-  height: 25vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
-  margin: 10px 0 0 0;
-}
-#button-readmore{
-  background: none;
-  padding: 10px 24px;
-  border: 1px solid #ffffff;
-  color: white;
-  display: flex;
-  align-self: flex-start;
-  margin: 10px;
-}
-
-footer{
-  background-image: url("./assets/images/dark-wood@2x.png");
-  height: 30vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
-}
-aside{
-  width: 20%;
-  padding: 40px 0 40px 40px;
-  border-left: solid 1px #c3c3c3;
-}
-aside h4{
-  color: black;
-}
-#top-nav-journal a:link, #top-nav-journal a:visited, #top-nav-journal a:active{
-  text-decoration: none;
-  color: #248A83;
-}
-
-
-#journal-posts{
-  width: 80%;
-  padding: 40px;
-  margin: auto;
-}
-#journal-wrap{
-  padding-bottom: 20px;
-}
-#journal-wrap h1 h2{
-  /*use sass extends*/
-  background-color: #248A83;
-  color: white;
-}
-
-#journal-wrap h1{
-  width: 75%;
-}
-
-#journal-wrap h2{
-  width: 45%;
-}
-#journal-banner-1{
-  /*use extends in sass for 1-4 images*/
-  background-image: url("./assets/images/blog-photos/van-camper.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#journal-banner-1 h1, #journal-banner-1 h2{
-  color: white;
-  background-color: #248A83;
-}
-
-
-#journal-banner-2{
-  background-image: url("./assets/images/blog-photos/warm-cocktail.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#journal-banner-3{
-  background-image: url("./assets/images/blog-photos/healthy-camp-food.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#journal-banner-4{
-  background-image: url("./assets/images/blog-photos/solo-camping.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#journal-banner-5{
-  background-image: url("./assets/images/blog-photos/glamping.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.adventure-image-banner{
-  /*background-image: url("./assets/images/adventure-photos/night-sky.jpg");
-  height: 50vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;*/
-}
-article{
-  width:70%;
-  margin: auto;
-  padding: 20px;
-}
-article h2{
-  color:black;
-  font-size: 2em;
-  padding: 0;
-}
-#submit-form-section{
-  width:70%;
-  margin: auto;
-  padding: 20px;
-}
-form{
-  margin:auto;
-}
-textarea{
-	width: 80%;
-	height: 40vh;
-}
-#about-page{
-  width: 80%;
-  padding: 30px 0 60px 0;
-  margin: auto;
-}
-#about-page h5{
-  color: black;
-  text-align: center;
-  padding: 30px;
-}
-
-#page-not-found-page{
-  width: 80%;
-  margin: auto;
 }

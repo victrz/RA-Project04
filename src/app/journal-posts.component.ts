@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import 'rxjs/add/operator/switchMap';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location }               from '@angular/common';
 
 @Component({
   selector: 'journal-posts',
   templateUrl: './journal-posts.component.html',
-  styleUrls: ['../style.css']
+  styleUrls: ['../style.css','./journal-posts.component.css']
 })
 export class JournalPostsComponent{
 

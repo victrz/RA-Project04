@@ -7,7 +7,7 @@ import { JournalService } from './service/journal.service';
 @Component({
   selector: 'submit-journal-entry',
   templateUrl: './submit-journal-entry.component.html',
-  styleUrls: ['./submit-journal-entry.component.css']
+  styleUrls: ['../style.css','./submit-journal-entry.component.css']
 })
 export class SubmitJournalEntryComponent implements OnInit {
 

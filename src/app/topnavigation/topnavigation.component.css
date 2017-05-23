@@ -1,0 +1,36 @@
+/*.nav-wrap{
+  border-bottom: solid 1px #c3c3c3;
+}
+
+/*#top-nav-journal{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Novecento-Normal.ttf";
+  color: #248A83;
+}
+#top-nav-journal a:link a:visited a:active{
+  text-decoration: none;
+  color: #248A83;
+}*/
+/*a:link, a:visited {
+    text-decoration: none;
+    color: #248A83;
+}*/
+
+/*#top-nav{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Novecento-Normal.ttf";
+
+}*/
+
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 40%;
+}

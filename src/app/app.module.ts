@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { ShowLatestJournalsComponent } from './show-latest-journals.component';
 import { JournalService } from './service/journal.service';
 import { SubmitJournalEntryComponent } from './submit-journal-entry.component';
+import { TopnavigationComponent } from './topnavigation/topnavigation.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -24,7 +26,9 @@ import { SubmitJournalEntryComponent } from './submit-journal-entry.component';
     AboutComponent,
     PageNotFoundComponent,
     ShowLatestJournalsComponent,
-    SubmitJournalEntryComponent
+    SubmitJournalEntryComponent,
+    TopnavigationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

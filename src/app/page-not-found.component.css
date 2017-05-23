@@ -1,0 +1,31 @@
+#top-nav-journal{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Novecento-Normal.ttf";
+  color: #248A83;
+}
+#top-nav-journal a:link a:visited a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #248A83;
+}
+#page-not-found-page{
+  width: 80%;
+  margin: auto;
+}
+#page-contents{
+  height: 80vh;
+}
+aside{
+  width: 20%;
+  padding: 40px 0 40px 40px;
+  border-left: solid 1px #c3c3c3;
+}
+aside h4{
+  color: black;
+}

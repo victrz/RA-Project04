@@ -1,0 +1,36 @@
+
+.adventure-image-banner{
+  /*background-image: url("./assets/images/adventure-photos/night-sky.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;*/
+}
+
+#top-nav-journal{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Novecento-Normal.ttf";
+  color: #248A83;
+}
+#top-nav-journal a:link a:visited a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #248A83;
+}
+article{
+  width:70%;
+  margin: auto;
+  padding: 20px;
+}
+article h2{
+  color:black;
+  font-size: 2em;
+  padding: 0;
+}

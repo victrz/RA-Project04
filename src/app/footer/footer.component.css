@@ -1,0 +1,18 @@
+footer{
+  background-image: url("../../assets/images/dark-wood@2x.png");
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+.text-footer-copyright{
+  font-family: "Novecento-Normal.ttf";
+  font-size: 0.5em;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.text-footer-bold{
+  font-family: "Merriweather-Bold.ttf";
+}

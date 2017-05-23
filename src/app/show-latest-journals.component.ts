@@ -7,7 +7,7 @@ import { JournalResponse } from './model/journal-response';
 @Component({
   selector: 'show-latest-journals',
   templateUrl: './show-latest-journals.component.html',
-  styleUrls: ['../style.css']
+  styleUrls: ['../style.css', './show-latest-journals.component.css']
 })
 export class ShowLatestJournalsComponent implements OnInit {
   currentJournal:Journal;

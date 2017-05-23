@@ -1,5 +1,6 @@
 
 <section id="submit-form-section">
+  <h1>SUBMIT A NEW ADVENTURE</h1>
   <form id="apiForm" method="post" #apiForm="ngForm">
     <input type="text" id="title" name="title" value="This Is a Default Title" placeholder="This Is a Default Title" size="50"><br />
     <textarea name="content" id="content" value="This Is Default Content" rows="5" cols="50" placeholder="This Is Default Content"></textarea><br />
@@ -11,7 +12,7 @@
               [value]="name">{{name}}</option>
     </select>
     <br />
-    <button type="button" id="submit" name="submit" value="submit" (click)="submitForm($event)">submit</button>
+    <button type="button" id="button-submit" name="submit" value="submit" (click)="submitForm($event)">submit</button>
     <br />
   </form>
 </section>
