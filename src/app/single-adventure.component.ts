@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Location }               from '@angular/common';
 import { Observable } from 'rxjs/Observable';
 import { Journal } from './model/journal';
 import { JournalService }  from './service/journal.service';
@@ -44,10 +45,12 @@ export class SingleAdventureComponent{
           default:
             let newJournal = new Journal();
             newJournal.id = myResponse[item]['ID'];
-            newJournal.title = myResponse[item]['title'];
-            newJournal.content = myResponse[item]['content'];
+            newJournal.title = myResponse[item]['title'].replace(/&#039;/g, `'`);
+            newJournal.content = myResponse[item]['content'].replace(/&#039;/g, `'`);
             newJournal.categories = myResponse[item]['categories'];
-            newJournal.image = myResponse[item]['image'];
+            let blankImage="http://www.fitworx.com/wp-content/uploads/2016/10/sorry-image-not-available.png";
+            let lowerCaseImage = myResponse[item]['image'].toString().toLowerCase();
+            newJournal.image = lowerCaseImage=(lowerCaseImage === 'false')?blankImage:myResponse[item]['image'];
             newJournal.date = myResponse[item]['date'];
             newJournal.author = myResponse[item]['author'];
             newEntries.allJournals.push(newJournal);
@@ -55,11 +58,11 @@ export class SingleAdventureComponent{
         }
       }
       this.journalEntries = newEntries;
-      // console.log(newEntries);
+      console.log("$$$$$$");
+      console.log(this.journalEntries.allJournals[2].title);
       return newEntries;
 
     }
-    // 1
     const matchID: Function = () => {
       let q = (x) => {
         console.log(this.journalID);
@@ -87,6 +90,7 @@ export class SingleAdventureComponent{
 
   someOtherFunction(newArray){
     this.currentAdventure = newArray;
+
     //document.getElementById('adventure-image').style.backgroundImage="url(`{this.currentAdventure.image}`)";
     // document.getElementById("left-adventure").style.backgroundImage = "url('{j.allJournals[0].image}')";
 

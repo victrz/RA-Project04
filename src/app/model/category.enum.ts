@@ -1,4 +1,5 @@
-export enum CategoryEnum {
+
+export enum CategoryEnum{
   Adventure = 0,
   Editorial = 1,
   Humour = 2,

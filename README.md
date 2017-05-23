@@ -6,4 +6,8 @@ may 22:
 single-adventure url is set to home for some reason.
 need to validate image so if false placehold image is used
 need to replace commas
-sass 
+sass
+
+may 23:
+need to:
+create interfaces, sass, more adventures button navigates to list of last 15(?) entries in list

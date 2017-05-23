@@ -1,0 +1,105 @@
+header{
+  z-index: 100000000;
+}
+#top-nav-journal{
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Novecento-Normal.ttf";
+  color: #248A83;
+}
+#top-nav-journal a:link a:visited a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: #248A83;
+}
+.nav-wrap{
+  border-bottom: solid 1px #c3c3c3;
+}
+#journal-posts{
+  width: 80%;
+  padding: 40px;
+  margin: auto;
+}
+#journal-wrap{
+  padding-bottom: 20px;
+}
+
+h1{
+  font-family: "Novecento-Normal.ttf";
+  font-size: 2em;
+  padding: 20px;
+  width: 75%;
+  color: white;
+  background-color: #248A83;
+}
+h2{
+  font-family: "Novecento-DemiBold.ttf";
+  font-size: 1.4em;
+  line-height: 0.8em;
+  padding: 10px 35px;
+  color: #008080;
+  text-align: left;
+  width: 45%;
+  color: white;
+  background-color: #248A83;
+}
+
+#journal-banner-1{
+  /*use extends in sass for 1-4 images*/
+  background-image: url("../../assets/images/blog-photos/van-camper.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-2{
+  background-image: url("../../assets/images/blog-photos/warm-cocktail.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-3{
+  background-image: url("../../assets/images/blog-photos/healthy-camp-food.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-4{
+  background-image: url("../../assets/images/blog-photos/solo-camping.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#journal-banner-5{
+  background-image: url("../../assets/images/blog-photos/glamping.jpg");
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#button-journal{
+  /*set button position from bottom left*/
+  background-color: #ffffff;
+  padding: 10px 24px;
+  border: 1px solid #000000;
+  color: black;
+  display: flex;
+  align-self: flex-start;
+  margin: 10px 0 10px 30px;
+}
+aside{
+  width: 20%;
+  padding: 40px 0 40px 40px;
+  border-left: solid 1px #c3c3c3;
+}
+aside h4{
+  color: black;
+}

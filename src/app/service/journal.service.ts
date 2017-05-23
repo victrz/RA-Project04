@@ -22,8 +22,7 @@ export class JournalService {
   }
   postEntry(params: any): Promise<any> {
     let postURL = this.postURL + "?params=" + params;
-    console.log(this.postURL);
-
+    console.log(postURL);
      let responseFn:any = res => {
          console.log('*****************');
          console.log(res);
@@ -38,13 +37,14 @@ export class JournalService {
 
         if (check == "post_created"){
           window.alert("Success! Post was Created!");
+          var inputValue = (<HTMLFormElement>document.getElementById('apiForm')).reset();        
         }
         else{
           window.alert("Error");
         }
 
      };
-     
+
 
      let postProcess = this.http.post(postURL, params);
      let whatToDoNext = postProcess.toPromise().then(responseFn).catch(this.handleError);

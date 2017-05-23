@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JournalEntries } from './model/journal-entries';
+import { Router } from '@angular/router';
 import { Journal } from './model/journal';
 import { JournalService } from './service/journal.service';
 import { JournalResponse } from './model/journal-response';
@@ -12,7 +13,7 @@ import { JournalResponse } from './model/journal-response';
 export class ShowLatestJournalsComponent implements OnInit {
   currentJournal:Journal;
   journalEntries:JournalResponse;
-  constructor(private journalService: JournalService) {}
+  constructor( private router: Router, private journalService: JournalService) {}
 
   ngOnInit(): void {
 
@@ -34,7 +35,7 @@ export class ShowLatestJournalsComponent implements OnInit {
           default:
             let newJournal = new Journal();
             newJournal.id = myResponse[item]['ID'];
-            newJournal.title = myResponse[item]['title'];
+            newJournal.title = myResponse[item]['title'].replace(/&#039;/g, `'`);
             newJournal.categories = myResponse[item]['categories'];
             newJournal.image = myResponse[item]['image'];
             newJournal.date = myResponse[item]['date'];
@@ -51,6 +52,10 @@ export class ShowLatestJournalsComponent implements OnInit {
     const resolveDetails: any = Promise.resolve(myPromiseOfJournals.then(extractDataFromPromise).then( (r) => { this.journalEntries = r } ));
   }
 
+  gotoDetail(id): void {
+    console.log("DETAIL");
+    this.router.navigate(['/single-adventure', id]);
+  }
 
   renderView(){
     console.log();

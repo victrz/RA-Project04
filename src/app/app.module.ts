@@ -14,6 +14,7 @@ import { JournalService } from './service/journal.service';
 import { SubmitJournalEntryComponent } from './submit-journal-entry.component';
 import { TopnavigationComponent } from './topnavigation/topnavigation.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdventureListComponent } from './adventure-list/adventure-list.component';
 
 
 
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     ShowLatestJournalsComponent,
     SubmitJournalEntryComponent,
     TopnavigationComponent,
-    FooterComponent
+    FooterComponent,
+    AdventureListComponent
   ],
   imports: [
     BrowserModule,

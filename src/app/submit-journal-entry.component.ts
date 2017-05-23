@@ -20,7 +20,6 @@ export class SubmitJournalEntryComponent implements OnInit {
   ngOnInit() {
     console.log("IN SUBMIT JOURNAL COMPONENT");
     const x = CategoryEnum;
-    // console.log(x);
     const options = Object.keys(x);
     this.categories = options.slice(options.length / 2);
   }
@@ -32,7 +31,6 @@ export class SubmitJournalEntryComponent implements OnInit {
 
   submitForm(e:any) {
     console.log("SUBMITFROM E BUTTON HANDLER FUNCTION");
-    // console.log((e.target as HTMLButtonElement).parentElement);
     const theForm = (e.target as HTMLButtonElement).parentElement;
     /* */
     const serializedForm = this.jsSerializeArray(theForm);
@@ -67,4 +65,9 @@ export class SubmitJournalEntryComponent implements OnInit {
      }
      return s;
    };
+   resetForm(e:any) {
+     console.log("RESET");
+     const theForm = (e.target).parentElement.reset();
+}
+
 }

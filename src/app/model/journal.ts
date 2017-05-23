@@ -1,4 +1,6 @@
-export class Journal {
+import {IJournal} from "./Ijournal";
+
+export class Journal implements IJournal {
   id:number = 0;
   title:string = "";
   content:string = "";
@@ -6,6 +8,7 @@ export class Journal {
   image:string = "";
   date:string = "";
   author:string = "";
+
   constructor(id:number = 0, title:string = '',
    content:string = '', categories:Array<string> = [], image:string="", date:string="", author:string="") {
     this.id = id;
