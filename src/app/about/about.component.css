@@ -9,18 +9,23 @@
   padding: 30px;
 }
 .background-image-about{
-  background-image: url("../assets/images/about-hero.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../assets/images/about-hero.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   justify-content: center;
+  position: relative;
 }
+
+
 .background-image-about h1{
+  position: absolute;
+   top: 150px;
+   left: 0;
+   width: 100%;
   font-family: "Novecento-DemiBold.ttf";
   color: white;
-  display: flex;
-  justify-content: center;
-  align-self: center;
+
 }

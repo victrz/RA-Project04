@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { JournalEntries } from './model/journal-entries';
+import { JournalEntries } from '../model/journal-entries';
 import { Router } from '@angular/router';
-import { Journal } from './model/journal';
-import { JournalService } from './service/journal.service';
-import { JournalResponse } from './model/journal-response';
+import { Journal } from '../model/journal';
+import { JournalService } from '../service/journal.service';
+import { JournalResponse } from '../model/journal-response';
 
 @Component({
   selector: 'show-latest-journals',
   templateUrl: './show-latest-journals.component.html',
-  styleUrls: ['../style.css', './show-latest-journals.component.css']
+  styleUrls: ['../../style.css', './show-latest-journals.component.css']
 })
 export class ShowLatestJournalsComponent implements OnInit {
   currentJournal:Journal;
@@ -16,8 +16,6 @@ export class ShowLatestJournalsComponent implements OnInit {
   constructor( private router: Router, private journalService: JournalService) {}
 
   ngOnInit(): void {
-
-    // const journalsFromService: any = this.journalService.getJournals();
 
     console.log('initializing show-latest-journals view');
     const myPromiseOfJournals: any = this.journalService.getJournals();

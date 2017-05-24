@@ -1,0 +1,59 @@
+.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+   height: auto;
+
+}
+h3 {
+   position: absolute;
+   top: 20%;
+   left: 0;
+   width: 100%;
+}
+#button-more-adventures{
+  background-color: #008080;
+  padding: 10px 24px;
+  margin: 10px 0 10px 0;
+  border: none;
+  color: white;
+}
+
+#adventure-wrap{
+  width: 100%;
+  padding-bottom: 20px;
+}
+#button-readmore{
+  background: none;
+  padding: 10px 24px;
+  border: 1px solid #ffffff;
+  color: white;
+  display: flex;
+  align-self: flex-start;
+  margin: 10px;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+}
+#left-adventure{
+  position: relative;
+  height: auto;
+  width: 50%;
+}
+#right-top-adventure{
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 0 0 0 5px;
+}
+#right-bottom-left-adventure{
+  position: relative;
+  height: auto;
+  width: 50%;
+  margin: 10px 10px 0 5px;
+}
+#right-bottom-right-adventure{
+  position: relative;
+  height: auto;
+  width: 50%;
+  margin: 10px 0 0 0;
+}

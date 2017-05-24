@@ -52,35 +52,35 @@ h2{
 
 #journal-banner-1{
   /*use extends in sass for 1-4 images*/
-  background-image: url("../assets/images/blog-photos/van-camper.jpg");
+  background-image: url("../../assets/images/blog-photos/van-camper.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-2{
-  background-image: url("../assets/images/blog-photos/warm-cocktail.jpg");
+  background-image: url("../../assets/images/blog-photos/warm-cocktail.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-3{
-  background-image: url("../assets/images/blog-photos/healthy-camp-food.jpg");
+  background-image: url("../../assets/images/blog-photos/healthy-camp-food.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-4{
-  background-image: url("../assets/images/blog-photos/solo-camping.jpg");
+  background-image: url("../../assets/images/blog-photos/solo-camping.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #journal-banner-5{
-  background-image: url("../assets/images/blog-photos/glamping.jpg");
+  background-image: url("../../assets/images/blog-photos/glamping.jpg");
   height: 50vh;
   background-position: center;
   background-size: cover;

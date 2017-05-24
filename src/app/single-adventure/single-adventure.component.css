@@ -6,6 +6,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;*/
+  /*position: relative;
+   width: 100%;
+   margin:auto;*/
+}
+.margin-auto{
+  margin:auto;
 }
 
 #top-nav-journal{
@@ -24,8 +30,11 @@ a:link, a:visited {
     text-decoration: none;
     color: #248A83;
 }
+.nav-wrap{
+  border-bottom: solid 1px #c3c3c3;
+}
 article{
-  width:70%;
+  width:90%;
   margin: auto;
   padding: 20px;
 }
@@ -33,4 +42,12 @@ article h2{
   color:black;
   font-size: 2em;
   padding: 0;
+}
+aside{
+  width: 20%;
+  padding: 40px 0 40px 40px;
+  border-left: solid 1px #c3c3c3;
+}
+aside h4{
+  color: black;
 }

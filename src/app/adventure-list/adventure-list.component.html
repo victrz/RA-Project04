@@ -5,7 +5,7 @@
         <img src="../assets/images/logos/inhabitent-logo-tent-white.svg" alt="tent logo" class="image-logo flex" height="20px" [routerLink]="['/home']" routerLinkActive="active">
         <ul class="flex flex-just-around">
           <li><a class="" routerLink="/about" routerLinkActive="active"> about </a></li>
-            <li><a class="" href="#shop"> shop </a></li>
+            <li><a class="" href="shop"> shop </a></li>
             <li><a class="" href="#"> featured </a></li>
             <li><a class="" href="#"> updates </a></li>
             <li><a class="" href=""> <span class="fa fa-search" aria-hidden="true"></span></a></li>
@@ -15,7 +15,61 @@
   </div>
 </header>
 <content class="flex">
-  <div id="the-list"></div>
+  <section id="adventures" class="flex flex-col">
+  <!-- <div id="the-list"></div> -->
+
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[0]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[0]['date']}}</h2>
+      <p >{{(journalEntries.allJournals[0]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[0].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[1]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[1]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[1]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[1].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[2]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[2]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[2]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[2].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[3]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[3]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[3]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[3].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[4]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[4]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[4]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[4].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[5]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[5]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[5]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[5].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[6]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[6]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[6]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[6].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[7]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[7]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[7]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[7].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[8]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[8]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[8]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[8].id]">[...]</a></p>
+    </div>
+    <div id="each-adventure">
+      <h1>{{journalEntries.allJournals[9]['title']}}</h1>
+      <h2>{{journalEntries.allJournals[9]['date']}}</h2>
+      <p>{{(journalEntries.allJournals[9]['content']).substring(0,200)}}<a [routerLink]="['/single-adventure',journalEntries.allJournals[9].id]">[...]</a></p>
+    </div>
+
+  </section>
   <aside class="flex flex-col">
     <div>
       <h4>CONTACT INFO</h4>

@@ -1,0 +1,50 @@
+<!--  SINGLE ADVENTURE VIEW -->
+<header>
+    <div class="nav-wrap">
+
+      <nav id="top-nav-journal">
+        <div class="flex flex-grow flex-just-between ">
+          <img src="../../assets/images/logos/inhabitent-logo-tent-white.svg" alt="tent logo" class="image-logo flex" height="20px" [routerLink]="['/home']" routerLinkActive="active">
+          <ul class="flex flex-just-around">
+              <li><a class="" routerLink="/about" routerLinkActive="active"> about </a></li>
+              <li><a class="" href="shop"> shop </a></li>
+              <li><a class="" href="#"> featured </a></li>
+              <li><a class="" href="#"> updates </a></li>
+              <li><a class="" href=""> <span class="fa fa-search" aria-hidden="true"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <content class="flex">
+    <section class="flex flex-col flex-grow">
+      <article>
+        <img class="margin-auto" src="{{currentAdventure.image}}" height="400px" width="600px">
+
+        <h2>{{currentAdventure.title}}</h2>
+        <h5>{{currentAdventure.author}}</h5>
+        <p>{{currentAdventure.date}}</p>
+        <p>{{currentAdventure.content}}</p>
+        <p>{{currentAdventure.image}} </p>
+      </article>
+      <submit-journal-entry></submit-journal-entry>
+    </section>
+    <aside class="flex flex-col">
+      <div>
+        <h4>CONTACT INFO</h4>
+        <p class="body-font"><span class="fa fa-envelope" aria-hidden="true"></span>info@inhabitent.com</p>
+        <p class="body-font"><span class="fa fa-phone" aria-hidden="true"></span> 778-456-7891</p>
+        <p class=""><span class="fa fa-facebook-official" aria-hidden="true"></span> <span class="fa fa-twitter-square" aria-hidden="true"></span> <span class="fa fa-google-plus-square" aria-hidden="true"></span>
+      </div>
+      <div>
+        <h4>BUSINESS HOURS</h4>
+        <p class="body-font "><span class="text-footer-bold">monday-friday</span> 9am to 5pm</p>
+        <p class="body-font "><span class="text-footer-bold">saturday</span> 10am to 2pm</p>
+        <p class="body-font "><span class="text-footer-bold">sunday</span> Closed</p>
+      </div>
+      <div>
+        <h4>ARCHIVES</h4>
+      </div>
+    </aside>
+
+  </content>

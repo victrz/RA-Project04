@@ -2,9 +2,9 @@
 <section id="submit-form-section">
   <h1>SUBMIT A NEW ADVENTURE</h1>
   <form id="apiForm" method="post" #apiForm="ngForm">
-    <input type="text" id="title" name="title" value="This Is a Default Title" placeholder="This Is a Default Title" size="50"><br />
-    <textarea name="content" id="content" value="This Is Default Content" rows="5" cols="50" placeholder="This Is Default Content"></textarea><br />
-    <input type="text" id="image" name="image" value="https://unsplash.it/200/300" size="50" placeholder="http://www.fitworx.com/wp-content/uploads/2016/10/sorry-image-not-available.png"><br />
+    <input type="text" id="title" name="title" value="Title" placeholder="This Is a Default Title" size="50"><br />
+    <textarea name="content" id="content" value="Content" rows="5" cols="50" placeholder="This Is Default Content"></textarea><br />
+    <input type="text" id="image" name="image" value="image URL" size="50" placeholder="http://www.fitworx.com/wp-content/uploads/2016/10/sorry-image-not-available.png"><br />
     <select multiple id="categories" name = "categories"
             (change)="parseSelectedValue($event.target.value)">
       <option>--select--</option>

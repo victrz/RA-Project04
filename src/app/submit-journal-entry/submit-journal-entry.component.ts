@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Journal } from './model/journal';
-import { CategoryEnum } from './model/category.enum';
-import { JournalService } from './service/journal.service';
+import { Journal } from '../model/journal';
+import { CategoryEnum } from '../model/category.enum';
+import { JournalService } from '../service/journal.service';
 
 
 @Component({
   selector: 'submit-journal-entry',
   templateUrl: './submit-journal-entry.component.html',
-  styleUrls: ['../style.css','./submit-journal-entry.component.css']
+  styleUrls: ['../../style.css','./submit-journal-entry.component.css']
 })
 export class SubmitJournalEntryComponent implements OnInit {
 

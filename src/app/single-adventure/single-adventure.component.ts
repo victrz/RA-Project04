@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 import { Observable } from 'rxjs/Observable';
-import { Journal } from './model/journal';
-import { JournalService }  from './service/journal.service';
-import { JournalResponse } from './model/journal-response';
+import { Journal } from '../model/journal';
+import { JournalService }  from '../service/journal.service';
+import { JournalResponse } from '../model/journal-response';
 
 
 @Component({
   selector: 'single-adventure',
   templateUrl: './single-adventure.component.html',
-  styleUrls: ['../style.css', './single-adventure.component.css']
+  styleUrls: ['../../style.css', './single-adventure.component.css']
 })
 export class SingleAdventureComponent{
 

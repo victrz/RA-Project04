@@ -2,21 +2,25 @@
   <h1>LATEST ADVENTURES</h1>
   <div id="adventure-wrap" class="flex">
     <div id="left-adventure"  *ngIf="journalEntries" class="flex flex-grow flex-col">
+      <img src="{{journalEntries.allJournals[0].image}}" *ngIf="journalEntries" height="400" alt="" />
       <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[0].title}}</h3>
       <button id="button-readmore" (click)="gotoDetail(journalEntries.allJournals[0].id)" type="button">READ MORE</button>
     </div>
     <div class="flex flex-col width50 flex-grow">
       <div id="right-top-adventure" *ngIf="journalEntries" class="flex flex-grow flex-col">
+        <img src="{{journalEntries.allJournals[1].image}}" *ngIf="journalEntries" height="190" alt="" />
         <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[1].title}}</h3>
         <button id="button-readmore" [routerLink]="['/single-adventure',journalEntries.allJournals[1].id]" type="button">READ MORE</button>
       </div>
        <!-- routerLinkActive="active" -->
       <div class="flex flex-row">
         <div id="right-bottom-left-adventure" *ngIf="journalEntries" class="flex flex-col flex-grow">
+          <img src="{{journalEntries.allJournals[2].image}}" *ngIf="journalEntries" height="190" alt="" />
           <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[2].title}}</h3>
           <button id="button-readmore" [routerLink]="['/single-adventure',journalEntries.allJournals[2].id]" type="button">READ MORE</button>
         </div>
         <div id="right-bottom-right-adventure" *ngIf="journalEntries" class="flex flex-col flex-grow">
+          <img src="{{journalEntries.allJournals[3].image}}" *ngIf="journalEntries" height="190" alt="" />
           <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[3].title}}</h3>
           <button id="button-readmore" [routerLink]="['/single-adventure',journalEntries.allJournals[3].id]"  type="button">READ MORE</button>
         </div>
