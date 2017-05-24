@@ -8,7 +8,6 @@ export class Journal implements IJournal {
   image:string = "";
   date:string = "";
   author:string = "";
-
   constructor(id:number = 0, title:string = '',
    content:string = '', categories:Array<string> = [], image:string="", date:string="", author:string="") {
     this.id = id;
@@ -19,5 +18,4 @@ export class Journal implements IJournal {
     this.date = date;
     this.author = author;
   }
-
 }

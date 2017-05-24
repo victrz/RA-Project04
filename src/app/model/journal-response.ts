@@ -1,11 +1,10 @@
-import { IJournalResponse } from "./Ijournal-response";
-import { Journal } from "./journal";
-import { JournalEntries } from "./journal-entries";
+import {IJournalResponse} from "./Ijournal-response";
+import { JournalContents } from "./journal-contents";
 export class JournalResponse implements IJournalResponse{
-  count?:number;
-  allJournals?:any;
-  constructor(count: number=0, allJournals: Array<any> = []){
-    this.count= count;
-    this.allJournals = allJournals;
+  status?:number;
+  contents?:JournalContents;
+  constructor(status: number=0, contents:JournalContents){
+    this.status= status;
+    this.contents = contents;
   }
 }

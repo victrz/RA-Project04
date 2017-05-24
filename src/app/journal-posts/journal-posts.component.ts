@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['../../style.css','./journal-posts.component.css']
 })
 export class JournalPostsComponent{
-
   constructor() { }
-
-
-
 }

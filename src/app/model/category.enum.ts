@@ -1,4 +1,3 @@
-
 export enum CategoryEnum{
   Adventure = 0,
   Editorial = 1,
@@ -7,5 +6,4 @@ export enum CategoryEnum{
   Politics = 4,
   Sports = 5,
   Kitty = 6
-
 }

@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
-import { Location }               from '@angular/common';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +7,5 @@ import { Location }               from '@angular/common';
   styleUrls: ['../../style.css', './about.component.css']
 })
 export class AboutComponent {
-
   constructor() { }
-
 }

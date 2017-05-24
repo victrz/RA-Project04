@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Journal } from '../model/journal';
 import { JournalService } from '../service/journal.service';
 import { JournalResponse } from '../model/journal-response';
-
+import { JournalContents } from '../model/journal-contents';
 @Component({
   selector: 'show-latest-journals',
   templateUrl: './show-latest-journals.component.html',
@@ -12,53 +12,44 @@ import { JournalResponse } from '../model/journal-response';
 })
 export class ShowLatestJournalsComponent implements OnInit {
   currentJournal:Journal;
-  journalEntries:JournalResponse;
+  journalEntries:JournalContents;
+  returnedContents = new JournalContents();
   constructor( private router: Router, private journalService: JournalService) {}
 
   ngOnInit(): void {
-
-    console.log('initializing show-latest-journals view');
     const myPromiseOfJournals: any = this.journalService.getJournals();
     const extractDataFromPromise: Function = (response) => {
       let myResponse:JournalResponse = <JournalResponse>response as JournalResponse;
-      let newEntries = new JournalResponse();
+      let returnedContents = myResponse.contents;
+      let newEntries = new JournalContents();
       let newCount:number = 0;
-      for (let item in myResponse){
+      for (let item in returnedContents){
         switch (item){
           case "count":
-            newCount= myResponse['count'];
+            newCount= returnedContents['count'];
             newEntries.count = newCount;
             //parseInt(newEntries['count'], 10);
             break;
           default:
             let newJournal = new Journal();
-            newJournal.id = myResponse[item]['ID'];
-            newJournal.title = myResponse[item]['title'].replace(/&#039;/g, `'`);
-            newJournal.categories = myResponse[item]['categories'];
-            newJournal.image = myResponse[item]['image'];
-            newJournal.date = myResponse[item]['date'];
-            newJournal.author = myResponse[item]['author'];
+            newJournal.id = returnedContents[item]['ID'];
+            newJournal.title = returnedContents[item]['title'].replace(/&#039;/g, `'`);
+            newJournal.categories = returnedContents[item]['categories'];
+            newJournal.image = returnedContents[item]['image'];
+            newJournal.date = returnedContents[item]['date'];
+            newJournal.author = returnedContents[item]['author'];
             newEntries.allJournals.push(newJournal);
             break;
         }
       }
-    //  this.renderView(newEntries);
       this.journalEntries = newEntries;
-
+      console.log(newEntries);
       return newEntries;
     }
-    const resolveDetails: any = Promise.resolve(myPromiseOfJournals.then(extractDataFromPromise).then( (r) => { this.journalEntries = r } ));
+    let resolveDetails: any = Promise.resolve(myPromiseOfJournals.then(extractDataFromPromise).then( (r) => { this.journalEntries = r } ));
   }
-
   gotoDetail(id): void {
     console.log("DETAIL");
     this.router.navigate(['/single-adventure', id]);
-  }
-
-  renderView(){
-    console.log();
-    //style backgroun images for adventure grid:
-    // document.getElementById("left-adventure").style.backgroundImage = "url('{j.allJournals[0].image}')";
-    // document.getElementById('RENDERHERE').innerHTML=j.allJournals[1].image;
   }
 }

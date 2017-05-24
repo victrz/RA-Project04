@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../style.css','./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
   constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

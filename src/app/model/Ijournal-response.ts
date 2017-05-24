@@ -1,4 +1,6 @@
+import { IJournal } from "./Ijournal";
+import { IJournalContents} from "./Ijournal-contents";
 export interface IJournalResponse {
-  count?:number;
-  allJournals?:any;
+  status?:number;
+  contents?:IJournalContents;
 }

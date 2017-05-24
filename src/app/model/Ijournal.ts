@@ -1,5 +1,4 @@
 export interface IJournal {
-
   id?:number;
   title:string;
   content:string;
@@ -7,5 +6,4 @@ export interface IJournal {
   image:string;
   date:string;
   author?:string;
-
 }

@@ -3,8 +3,9 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 import { Observable } from 'rxjs/Observable';
 import { Journal } from '../model/journal';
-import { JournalService }  from '../service/journal.service';
+import { JournalService } from '../service/journal.service';
 import { JournalResponse } from '../model/journal-response';
+import { JournalContents } from '../model/journal-contents';
 
 @Component({
   selector: 'adventure-list',
@@ -16,39 +17,41 @@ export class AdventureListComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private service: JournalService) { }
   currentJournal:Journal;
   journalEntries:JournalResponse;
+  returnedContents = new JournalContents();
   journalID:number;
 
   ngOnInit() {
-        const myPromiseOfJournals: any = this.service.getJournals();
-        const extractDataFromPromise: Function = (response) => {
-          let myResponse:JournalResponse = <JournalResponse>response as JournalResponse;
-          let newEntries = new JournalResponse();
-          let newCount:number = 0;
-          for (let item in myResponse){
-            switch (item){
-              case "count":
-                newCount= myResponse['count'];
-                newEntries.count = newCount;
-                //parseInt(newEntries['count'], 10);
-                break;
+    const myPromiseOfJournals: any = this.service.getJournals();
+    const extractDataFromPromise: Function = (response) => {
+      let myResponse:JournalResponse = <JournalResponse>response as JournalResponse;
+      let returnedContents = myResponse.contents;
+
+      //let myResponse.contents = new JournalContents();
+      let newEntries = new JournalContents();
+      let newCount:number = 0;
+      for (let item in returnedContents){
+        switch (item){
+          case "count":
+            newCount= returnedContents['count'];
+            newEntries.count = newCount;
+            //parseInt(newEntries['count'], 10);
+            break;
               default:
                 let newJournal = new Journal();
-                newJournal.id = myResponse[item]['ID'];
-                newJournal.title = myResponse[item]['title'].replace(/&#039;/g, `'`);
-                newJournal.content = myResponse[item]['content'].replace(/&#039;/g, `'`);
-                newJournal.categories = myResponse[item]['categories'];
+                newJournal.id = returnedContents[item]['ID'];
+                newJournal.title = returnedContents[item]['title'].replace(/&#039;/g, `'`);
+                newJournal.content = returnedContents[item]['content'].replace(/&#039;/g, `'`);
+                newJournal.categories = returnedContents[item]['categories'];
                 let blankImage="http://www.fitworx.com/wp-content/uploads/2016/10/sorry-image-not-available.png";
-                let lowerCaseImage = myResponse[item]['image'].toString().toLowerCase();
-                newJournal.image = lowerCaseImage=(lowerCaseImage === 'false')?blankImage:myResponse[item]['image'];
-                newJournal.date = myResponse[item]['date'];
-                newJournal.author = myResponse[item]['author'];
+                let lowerCaseImage = returnedContents[item]['image'].toString().toLowerCase();
+                newJournal.image = lowerCaseImage=(lowerCaseImage === 'false')?blankImage:returnedContents[item]['image'];
+                newJournal.date = returnedContents[item]['date'];
+                newJournal.author = returnedContents[item]['author'];
                 newEntries.allJournals.push(newJournal);
                 break;
             }
           }
           this.journalEntries = newEntries;
-          console.log("$$$$$$");
-          console.log(this.journalEntries.allJournals[2].title);
           return newEntries;
 
         }
