@@ -21,14 +21,31 @@ header{
   font-family: "Novecento-Normal.ttf";
   color: #248A83;
 }
-#top-nav-journal a:link a:visited a:active{
+#top-nav-journal a:link{
   text-decoration: none;
   color: #248A83;
 }
-a:link, a:visited {
-    text-decoration: none;
-    color: #248A83;
+#top-nav-journal a:visited{
+  text-decoration: none;
+  color: #248A83;
 }
+#top-nav-journal a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+#each-adventure a:link{
+  text-decoration: none;
+  color: #248A83;
+}
+#each-adventure a:visited{
+  text-decoration: none;
+  color: #248A83;
+}
+#each-adventure a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+
 .nav-wrap{
   border-bottom: solid 1px #c3c3c3;
 }
@@ -41,7 +58,7 @@ a:link, a:visited {
   padding-bottom: 20px;
 }
 
-h1{
+#each-adventure h1{
   font-family: "Novecento-Normal.ttf";
   font-size: 2em;
   padding: 4px;
@@ -50,7 +67,7 @@ h1{
   background-color: #248A83;
 
 }
-h2{
+#each-adventure h2{
   font-family: "Novecento-DemiBold.ttf";
   font-size: 1.4em;
   line-height: 0.8em;

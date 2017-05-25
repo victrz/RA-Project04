@@ -4,7 +4,25 @@
    height: auto;
 
 }
-h3 {
+#left-adventure h3 {
+   position: absolute;
+   top: 20%;
+   left: 0;
+   width: 100%;
+}
+#right-top-adventure h3 {
+   position: absolute;
+   top: 20%;
+   left: 0;
+   width: 100%;
+}
+#right-bottom-left-adventure h3 {
+   position: absolute;
+   top: 20%;
+   left: 0;
+   width: 100%;
+}
+#right-bottom-right-adventure h3 {
    position: absolute;
    top: 20%;
    left: 0;
@@ -43,17 +61,20 @@ h3 {
   position: relative;
   height: auto;
   width: 100%;
-  margin: 0 0 0 5px;
+  /*margin: 0 0 0 5px;*/
 }
 #right-bottom-left-adventure{
   position: relative;
   height: auto;
   width: 50%;
-  margin: 10px 10px 0 5px;
+  margin: 10px 10px 0 0px;
 }
 #right-bottom-right-adventure{
   position: relative;
   height: auto;
   width: 50%;
   margin: 10px 0 0 0;
+}
+.left-margin{
+  margin-left: 5px;
 }

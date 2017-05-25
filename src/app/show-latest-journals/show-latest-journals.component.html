@@ -6,13 +6,12 @@
       <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[0].title}}</h3>
       <button id="button-readmore" (click)="gotoDetail(journalEntries.allJournals[0].id)" type="button">READ MORE</button>
     </div>
-    <div class="flex flex-col width50 flex-grow">
+    <div class="flex flex-col left-margin width50 flex-grow">
       <div id="right-top-adventure" *ngIf="journalEntries" class="flex flex-grow flex-col">
         <img src="{{journalEntries.allJournals[1].image}}" *ngIf="journalEntries" height="190" alt="" />
         <h3 *ngIf="journalEntries"> {{journalEntries.allJournals[1].title}}</h3>
         <button id="button-readmore" [routerLink]="['/single-adventure',journalEntries.allJournals[1].id]" type="button">READ MORE</button>
       </div>
-       <!-- routerLinkActive="active" -->
       <div class="flex flex-row">
         <div id="right-bottom-left-adventure" *ngIf="journalEntries" class="flex flex-col flex-grow">
           <img src="{{journalEntries.allJournals[2].image}}" *ngIf="journalEntries" height="190" alt="" />

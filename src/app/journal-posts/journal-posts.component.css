@@ -10,13 +10,17 @@ header{
   font-family: "Novecento-Normal.ttf";
   color: #248A83;
 }
-#top-nav-journal a:link a:visited a:active{
+#top-nav-journal a:link {
   text-decoration: none;
   color: #248A83;
 }
-a:link, a:visited {
-    text-decoration: none;
-    color: #248A83;
+#top-nav-journal a:visited{
+  text-decoration: none;
+  color: #248A83;
+}
+#top-nav-journal a:active{
+  text-decoration: none;
+  color: #248A83;
 }
 .nav-wrap{
   border-bottom: solid 1px #c3c3c3;
@@ -30,7 +34,7 @@ a:link, a:visited {
   padding-bottom: 20px;
 }
 
-h1{
+#journal-banner-1 h1{
   font-family: "Novecento-Normal.ttf";
   font-size: 2em;
   padding: 20px;
@@ -38,7 +42,81 @@ h1{
   color: white;
   background-color: #248A83;
 }
-h2{
+#journal-banner-1 h2{
+  font-family: "Novecento-DemiBold.ttf";
+  font-size: 1.4em;
+  line-height: 0.8em;
+  padding: 10px 35px;
+  color: #008080;
+  text-align: left;
+  width: 45%;
+  color: white;
+  background-color: #248A83;
+}
+#journal-banner-2 h1{
+  font-family: "Novecento-Normal.ttf";
+  font-size: 2em;
+  padding: 20px;
+  width: 75%;
+  color: white;
+  background-color: #248A83;
+}
+#journal-banner-2 h2{
+  font-family: "Novecento-DemiBold.ttf";
+  font-size: 1.4em;
+  line-height: 0.8em;
+  padding: 10px 35px;
+  color: #008080;
+  text-align: left;
+  width: 45%;
+  color: white;
+  background-color: #248A83;
+}
+#journal-banner-3 h1{
+  font-family: "Novecento-Normal.ttf";
+  font-size: 2em;
+  padding: 20px;
+  width: 75%;
+  color: white;
+  background-color: #248A83;
+}
+#journal-banner-3 h2{
+  font-family: "Novecento-DemiBold.ttf";
+  font-size: 1.4em;
+  line-height: 0.8em;
+  padding: 10px 35px;
+  color: #008080;
+  text-align: left;
+  width: 45%;
+  color: white;
+  background-color: #248A83;
+}#journal-banner-4 h1{
+  font-family: "Novecento-Normal.ttf";
+  font-size: 2em;
+  padding: 20px;
+  width: 75%;
+  color: white;
+  background-color: #248A83;
+}
+#journal-banner-4 h2{
+  font-family: "Novecento-DemiBold.ttf";
+  font-size: 1.4em;
+  line-height: 0.8em;
+  padding: 10px 35px;
+  color: #008080;
+  text-align: left;
+  width: 45%;
+  color: white;
+  background-color: #248A83;
+}#journal-banner-5 h1{
+  font-family: "Novecento-Normal.ttf";
+  font-size: 2em;
+  padding: 20px;
+  width: 75%;
+  color: white;
+  background-color: #248A83;
+}
+#journal-banner-5 h2{
   font-family: "Novecento-DemiBold.ttf";
   font-size: 1.4em;
   line-height: 0.8em;

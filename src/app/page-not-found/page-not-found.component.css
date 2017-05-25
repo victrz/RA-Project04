@@ -6,14 +6,19 @@
   font-family: "Novecento-Normal.ttf";
   color: #248A83;
 }
-#top-nav-journal a:link a:visited a:active{
+#top-nav-journal a:link{
   text-decoration: none;
   color: #248A83;
 }
-a:link, a:visited {
-    text-decoration: none;
-    color: #248A83;
+#top-nav-journal a:visited{
+  text-decoration: none;
+  color: #248A83;
 }
+#top-nav-journal a:active{
+  text-decoration: none;
+  color: #248A83;
+}
+
 #page-not-found-page{
   width: 80%;
   margin: auto;
