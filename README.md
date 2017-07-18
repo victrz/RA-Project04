@@ -1,7 +1,10 @@
 # RaProject04
 
+An adventure company's website built up of various components
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 This project includes the use of angular components, some of which require information from a service in order to display blog/journal entries, and one posts a new blog/journal entry to the server.
+HTML5, CSS3, Javascript, TypeScript, Angular
+Implements app routing, Http Request to post blog entries to server and retrieve from server.
 
 may 25, 2017: Future steps:
 -navigation/routing in the show-latest-journals component seems off; the address bar still shows as "home", but the proper component loads.

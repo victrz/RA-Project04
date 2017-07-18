@@ -178,7 +178,8 @@ aside{
   width: 20%;
   padding: 40px 0 40px 40px;
   border-left: solid 1px #c3c3c3;
+  /*color: black;*/
 }
 aside h4{
-  color: black;
+  /*color: black;*/
 }
